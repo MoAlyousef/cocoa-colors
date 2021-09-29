@@ -1,0 +1,1 @@
+bindgen src/cocoa_colors.h -o src/cocoa_colors.rs
