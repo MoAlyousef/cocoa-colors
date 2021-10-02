@@ -8,9 +8,9 @@
 #else
 
 #define COLOR_GET(color)                                                       \
-  void get_##color(double *r, double *g, double *b, double *a) {                \
+  void get_##color(double *r, double *g, double *b, double *a) {               \
     NSColor *i = [NSColor color];                                              \
-    NSColor *c = [i colorUsingColorSpace:[NSColorSpace genericRGBColorSpace]]; \
+    NSColor *c = [i colorUsingColorSpace:[NSColorSpace deviceRGBColorSpace]];  \
     [c getRed:r green:g blue:b alpha:a];                                       \
   }
 
