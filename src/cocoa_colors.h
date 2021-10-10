@@ -10,7 +10,7 @@
 #define COLOR_GET(color)                                                       \
   void get_##color(double *r, double *g, double *b, double *a) {               \
     NSColor *i = [NSColor color];                                              \
-    NSColor *c = [i colorUsingColorSpace:[NSColorSpace deviceRGBColorSpace]];  \
+    NSColor *c = [i colorUsingColorSpace:[NSColorSpace genericRGBColorSpace]]; \
     [c getRed:r green:g blue:b alpha:a];                                       \
   }
 
@@ -107,6 +107,3 @@ COLOR_GET(systemYellowColor)
 COLOR_GET(systemBlueColor)
 
 // COLOR_GET(systemCyanColor) // beta!
-
-
-
