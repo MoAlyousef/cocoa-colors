@@ -5,3 +5,5 @@ fn main() {
     build.compile("cocoa_colors");
 }
 
+#[cfg(not(target_os = "macos"))]
+fn main() {}
